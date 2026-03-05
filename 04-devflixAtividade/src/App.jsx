@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import logo from "./assets/devflix.png";
+import logo from "./assets/barbieflix.png";
 import lupa from "./assets/search.svg";
 
 import Rodape from "./components/Rodape/Rodape";
@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      await searchMovies("Hulk"); // termo para pesquina ao carregar o site
+      await searchMovies("Barbie"); // termo para pesquina ao carregar o site
     })();
   }, []);
 
@@ -35,7 +35,7 @@ const App = () => {
       <img
         id="Logo"
         src={logo}
-        alt="Logotipo do serviço de streaming Devflix, com letras vermelhas e fundo preto, promovendo conteúdo de séries, filmes e entretenimento online."
+        alt="Logotipo do serviço de streaming Barbieflix, com letras rosas e fundo rosado, promovendo conteúdo de séries, filmes e entretenimento online."
       />
 
       <div className="search">
@@ -52,6 +52,9 @@ const App = () => {
         />
       </div>
 
+
+
+
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie, index) => (
@@ -59,10 +62,10 @@ const App = () => {
           ))}
         </div>
       ) : (
-        <h2 className="empty">😢 Filme não encontrado 😢</h2>
+        <h2 className="empty">😒 Filme não encontrado 😒</h2>
       )}
 
-      <Rodape link={"https://github.com/ProfCastello"}>ProfCastello</Rodape>
+      <Rodape link={"https://github.com/JuliaPimentel1"}>Julia Pimentel</Rodape>
     </div>
   );
 };
