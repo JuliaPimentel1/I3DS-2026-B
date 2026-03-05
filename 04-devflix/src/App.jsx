@@ -12,7 +12,7 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   //Utilizando uma CHAVE de API do arquivo .env
-  const apiKey = import.meta.env.VITE_OMDB_API_KEY;
+  const apiKey = "e4d577fa";
   const apiUrl = `https://omdbapi.com/?apikey=${apiKey}`;
 
   //Criando a conexão com a API e trazendo informações
@@ -25,7 +25,9 @@ const App = () => {
   };
 
   useEffect(() => {
-    searchMovies("Hulk"); // termo para pesquina ao carregar o site
+    (async () => {
+      await searchMovies("Hulk"); // termo para pesquina ao carregar o site
+    })();
   }, []);
 
   return (
